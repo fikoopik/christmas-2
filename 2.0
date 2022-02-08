@@ -2508,22 +2508,3 @@ RunService:BindToRenderStep("AimLock", 0, function()
         CurrentCamera.CFrame = CFrame.lookAt(CurrentCamera.CFrame.Position, Hit.Position)
     end
 end)
-
-pcall(function()
-    game.StarterGui:SetCore("SendNotification", {
-      Title = 'Thank you for using the script, join our discord';
-      Text = 'Join our discord, https://discord.gg/S4nPz6quZM';
-      Duration = 40;
-    })
-    if not game.Players.LocalPlayer:IsInGroup(13635825) then
-      coroutine.resume(coroutine.create(function()
-         wait(10)
-         game.StarterGui:SetCore("SendNotification", {
-          Title = 'you are should join the discord ;)';
-          Text = 'Our Discord link was copied to your clipboard thx';
-          Duration = 20;
-         })
-         setclipboard('https://discord.gg/S4nPz6quZM')
-      end))
-    end
-  end)
